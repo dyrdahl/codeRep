@@ -20,7 +20,7 @@ class Sprite {
     if (this.sprite_json[this.root_e][this.state][this.cur_frame]['img'] == null) {
       console.log("loading");
       this.sprite_json[this.root_e][this.state][this.cur_frame]['img'] = new Image();
-      this.sprite_json[this.root_e][this.state][this.cur_frame]['img'].src = 'Penguins/' + this.root_e + '/' + this.state + '/' + this.cur_frame + '.png';
+      this.sprite_json[this.root_e][this.state][this.cur_frame]['img'].src = '../Penguins/' + this.root_e + '/' + this.state + '/' + this.cur_frame + '.png';
     }
 
     if (this.cur_bk_data != null && this.state == this.cur_bk_data.state) {
@@ -91,7 +91,7 @@ var keyDown = false;
 sprites_to_draw[0] = new Array(0); //background and 
 sprites_to_draw[1] = new Array(0); //forground
 
-$.getJSON("Penguins/animationData.json", function (data) {
+$.getJSON("../Penguins/animationData.json", function (data) {
   sprites_to_draw[1].push( new Sprite(data, 100 ,100, "idleWave") );
 });
 
